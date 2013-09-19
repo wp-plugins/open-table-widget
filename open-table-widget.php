@@ -2,7 +2,7 @@
 /*
 Plugin Name: Open Table Widget
 Plugin URI: http://wordpress.org/extend/plugins/open-table-widget/
-Description: Display an Open Table widget for your restaurant.
+Description: Display an Open Table widget for your restaurant, bar, nightclub or eatery.
 Version: 1.0
 Author: Devin Walker
 Author URI: http://imdev.in/

@@ -2,7 +2,7 @@
 Contributors: dlocc
 Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
-Requires at least: 3.0
+Requires at least: 3.5
 Tested up to: 3.6.1
 Stable tag: 1.0
 
