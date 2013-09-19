@@ -2,12 +2,9 @@
  *  Open Table Widget JavaScript
  *
  *  @description: JavaScripts for the frontend display of Open Table Widget
- *  @author: superhotheather
+ *  @author: Devin Walker
  *  @created: 9/10/13
  */
-
-
-jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
 
@@ -17,6 +14,7 @@ jQuery(document).ready(function ($) {
         todayHighlight: true
     });
 
+    //Set Date as Today
     $('.otw-reservation-date').val(getCurrentDate());
 
 
