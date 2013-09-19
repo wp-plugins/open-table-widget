@@ -1,0 +1,49 @@
+/***********************************
+Custom OTW Option Styles
+***********************************/
+
+.clearfix { *zoom: 1 }
+
+.clearfix:before, .clearfix:after { display: table; line-height: 0; content: "" }
+
+.clearfix:after { clear: both }
+
+.open-table-about-wrap { position: relative; background: url('../images/open-table-logo.png') no-repeat left center transparent; height: 50px; margin: 0 0 10px; }
+
+#sunrise-plugin-settings .hndle:hover, #sunrise-plugin-settings h3:hover { cursor: default; }
+
+.google-plus { margin-left: 20px; display: inline; }
+
+/*----------------------------------------
+Labels
+-------------------------------------------*/
+
+.label:hover { cursor: default; }
+
+.label {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #FFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #999;
+}
+
+.basic-label {
+    position: absolute;
+    top: 6px;
+    left: 270px;
+    cursor: default;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.15);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 3px 6px;
+}
