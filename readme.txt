@@ -6,7 +6,7 @@ Requires at least: 3.5
 Tested up to: 3.6.1
 Stable tag: 1.2
 
-Open Table Widget makes it a breeze for you to add a powerful Open Table reservation forms to your website using an easy to use and intuitive widget.
+Open Table Widget makes it a breeze for you to add powerful Open Table reservation forms to your website via an easy to use and intuitive widget.
 
 == Description ==
 
