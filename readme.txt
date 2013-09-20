@@ -4,7 +4,7 @@ Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
 Requires at least: 3.5
 Tested up to: 3.6.1
-Stable tag: 1.1.1
+Stable tag: 1.2
 
 Open Table Widget makes it a breeze for you to add a powerful Open Table reservation forms to your website using an easy to use and intuitive widget.
 
@@ -44,13 +44,35 @@ Note: If you have Wordpress 2.7 or above (and I hope you are) you can simply go 
 
 == Frequently Asked Questions ==
 
-...coming soon!
+= Why should I use this plugin =
+
+If you want to include reservation integration into Open Table restaurant from a WordPress powered site, this plugin makes it easy and flexible. Compared to Open Table's own Reservation widget it's night and day.
+
+= Why does the widget look funny in my theme? =
+
+Most likely your theme has conflicting CSS that is interferring with the themes included with the plugin. If you're handy with CSS this can be an easy fix. If you are new to CSS then try out the Bare Bones theme to see if that looks nicer. Otherwise, you may have to hit up your coding friends to help you out.
+
+= Are style issue supported? =
+
+Not for the free plugin. If you are experiencing a style issue and need help, either upgrade to the Premium version and we will do our darndest to get it set up nicely for your theme.
+
+= Are there prebuilt styles included in the plugin? =
+
+Yes, there are three basic themes included in the free version of the plugin. The premium version has many more options and themes.
 
 == Screenshots ==
 
-...coming soon!
+1. The "Minimal Light" widget theme view on the frontend of WordPress
+
+2. The "Minimal Dark" widget theme view on the frontend of WordPress
+
+3. A view of the widget in the WP Admin widgets view version 1.1 (it may look different depending on your version).
 
 == Changelog ==
+
+= 1.2 =
+* Updated: Readme file for additional informaiton
+* New: Separated out bootstrap dropdown JS for better support of Bootstrap ready themes
 
 = 1.1.1 =
 * Updated: Separated Twitter Bootstrap Dropdown from select for better control and Bootstrap compatibility

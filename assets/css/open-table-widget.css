@@ -268,7 +268,7 @@ vertical-align: top; border-left: 4px solid transparent; border-right: 4px solid
 
 .dropdown.open .dropdown-toggle { color: #ffffff; background: #cccccc; background: rgba(0, 0, 0, 0.3); }
 
-.dropdown.open .dropdown-menu { display: block; }
+.dropdown.open > .dropdown-menu { display: block; }
 
 .typeahead { margin-top: 2px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 

@@ -24,7 +24,7 @@
 Toggle Sections
 -------------------------------------------*/
 
-.otw-widget-toggler { padding: 4px; margin: 0 0 10px; cursor: pointer; background-color: #F1F1F1; background-image: -ms-linear-gradient(top, #EFEFEF, #ECECEC); background-image: -moz-linear-gradient(top, #EFEFEF, #ECECEC); background-image: -o-linear-gradient(top, #EFEFEF, #ECECEC); background-image: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#ECECEC)); background-image: -webkit-linear-gradient(top, #EFEFEF, #ECECEC); background-image: linear-gradient(top, #EFEFEF, #ECECEC); }
+.otw-widget-toggler { padding: 4px; margin: 0 0 10px; cursor: pointer; background-color: #EBEBEB; background-image: -ms-linear-gradient(top, #EFEFEF, #ECECEC); background-image: -moz-linear-gradient(top, #EFEFEF, #ECECEC); background-image: -o-linear-gradient(top, #EFEFEF, #ECECEC); background-image: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#ECECEC)); background-image: -webkit-linear-gradient(top, #E7E7E7, #D5D5D5); background-image: linear-gradient(top, #EFEFEF, #ECECEC); }
 
 .otw-widget-toggler span { background: url('../../../../../wp-admin/images/arrows.png') no-repeat 60% -107px; float: right; height: 12px; display: inline-block; width: 12px; }
 
