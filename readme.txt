@@ -14,11 +14,11 @@ Open Table Widget makes it a breeze for you to add a powerful Open Table reserva
 Coming Soon!
 
 = Open Table Widget =
-*Open Table Widget* is a powerful WordPress widget that allows any restaurant, bar, nightclub or eatery listed on Open Table to display one or many reservation forms directly to their website. Choose from a number of configuration options to implement a reservation form that will help you increase user experience, reservations and profits!
+*Open Table Widget* is a powerful WordPress widget that allows any restaurant, bar, nightclub or eatery listed on Open Table to display one or many reservation forms directly to their website. Choose from a number of configuration options to implement a reservation form that will look amazing and help you increase your number of reservations and profits.
 
-Using the widget is made easier with in depth instructions and tips built right in. The plugin has a built in lookup service to help you find your Open Table restaurant ID and get you started.
+Using the widget is easy! Equipped with tooltips, videos and in depth instructions, Open Table Widget is for WordPress users of all skill levels. Don't know CSS? No problem! We've baked in several amazing looking prebuilt form layouts to help fit reservation forms into any theme.
 
-
+This plugin is actively developed and maintained and we welcome all suggestions, feedback and comments. If you enjoy this plugin be sure to rate it 5 stars and as "Working" to help propel it to the top.
 
 = Disclaimer =
 
@@ -60,6 +60,7 @@ Note: If you have Wordpress 2.7 or above (and I hope you are) you can simply go 
 * NEW: Powered by Open Table at bottom of widget output
 * Fixed: Issue with autocomplete selection effecting multiple instances of the widget in the WP admin
 * Removed: Timepicker JS, just wasn't making the cut
+* Update: Readme plugin description
 
 = 1.0.1 =
 * Fixed: JavaScript issue with main frontend JS script
