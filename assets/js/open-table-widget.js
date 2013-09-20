@@ -19,8 +19,10 @@ jQuery(document).ready(function ($) {
     //Set Date as Today
     $('.otw-reservation-date').val(getCurrentDate());
 
-    //Selects
-    $('.selectpicker').selectpicker();
+    //Selects (only if loaded)
+    if (typeof $.fn.selectpicker == 'function' ) {
+        $('.selectpicker').selectpicker();
+    }
 
     //Party Size Change
     $('.otw-party-size-select').on('change', function(){

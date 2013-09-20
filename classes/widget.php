@@ -86,8 +86,17 @@ class Open_Table_Widget extends WP_Widget {
         wp_enqueue_script('otw_datepicker_js');
 
         //Select Menus
-        wp_register_script('otw_select_js', plugins_url('assets/js/jquery.bootstrap-select.min.js', dirname(__FILE__), array('jquery')));
-        wp_enqueue_script('otw_select_js');
+        if ($this->options["disable_bootstrap_select"] !== "on") {
+
+            wp_register_script('otw_select_js', plugins_url('assets/js/jquery.bootstrap-select.min.js', dirname(__FILE__), array('jquery')));
+            wp_enqueue_script('otw_select_js');
+
+        }
+
+        if ($this->options["disable_bootstrap_dropdown"] !== "on" && $this->options["disable_bootstrap_select"] !== "on") {
+            wp_register_script('otw_dropdown_js', plugins_url('assets/js/jquery.bootstrap-dropdown.min.js', dirname(__FILE__)));
+            wp_enqueue_script('otw_dropdown_js');
+        }
 
 
         //Open Table Widget Specific Scripts
@@ -144,16 +153,16 @@ class Open_Table_Widget extends WP_Widget {
 
         // if the title is set & the user hasn't disabled title output
         if (!empty($title)) {
-                 /* Add the width from $widget_width to the class from the $before widget
-                http://wordpress.stackexchange.com/questions/18942/add-class-to-before-widget-from-within-a-custom-widget
-                */
-                // no 'class' attribute - add one with the value of width
-                if (strpos($before_title, 'class') === false) {
-                    $before_title = str_replace('>', 'class="otw-widget-title"', $before_title);
-                } // there is 'class' attribute - append width value to it
-                else {
-                    $before_title = str_replace('class="', 'class="otw-widget-title ', $before_title);
-                }
+            /* Add the width from $widget_width to the class from the $before widget
+           http://wordpress.stackexchange.com/questions/18942/add-class-to-before-widget-from-within-a-custom-widget
+           */
+            // no 'class' attribute - add one with the value of width
+            if (strpos($before_title, 'class') === false) {
+                $before_title = str_replace('>', 'class="otw-widget-title"', $before_title);
+            } // there is 'class' attribute - append width value to it
+            else {
+                $before_title = str_replace('class="', 'class="otw-widget-title ', $before_title);
+            }
 
             echo $before_title . $title . $after_title;
         }
