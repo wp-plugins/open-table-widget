@@ -4,9 +4,9 @@ Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
 Requires at least: 3.5
 Tested up to: 3.6.1
-Stable tag: 1.0.1
+Stable tag: 1.1
 
-Open Table Widget makes it a breeze for you to add a powerful Open Table reservation form on your website using an easy to use and intuitive widget.
+Open Table Widget makes it a breeze for you to add a powerful Open Table reservation forms to your website using an easy to use and intuitive widget.
 
 == Description ==
 
@@ -14,9 +14,9 @@ Open Table Widget makes it a breeze for you to add a powerful Open Table reserva
 Coming Soon!
 
 = Open Table Widget =
-*Open Table Widget* is a powerful WordPress widget that allows any restaurant, bar nightclub or eatery listed on Open Table to display a reservation form directly on their website. Choose from a number of configuration options to implement a reservation form that suits your website needs.
+*Open Table Widget* is a powerful WordPress widget that allows any restaurant, bar, nightclub or eatery listed on Open Table to display one or many reservation forms directly to their website. Choose from a number of configuration options to implement a reservation form that will help you increase user experience, reservations and profits!
 
-Using the widget is  and has a built in functionality to help you find your Open Table restaurant ID.
+Using the widget is made easier with in depth instructions and tips built right in. The plugin has a built in lookup service to help you find your Open Table restaurant ID and get you started.
 
 
 
@@ -24,7 +24,7 @@ Using the widget is  and has a built in functionality to help you find your Open
 
 Be sure to test the reservation form. While we've done our best to code it for use in different website environments, we provide this code "as-is" and make no warranties, representations, covenants or guarantees with regard to the reservation tools, and will not be liable for any direct, indirect, incidental or consequential damages or for loss of profit, revenue, data, business or use arising out of your use of the reservation tools.
 
-The developer of this plugin is in no way affiliated with Open Table the company or its affiliates. The code container herein is developed solely to give back to the WordPress community.
+The developer of this plugin is in no way affiliated with Open Table the company or its affiliates. The code contained herein is developed for free use and distribution in an effort to give back to the WordPress community.
 
 = Features =
 
@@ -51,6 +51,15 @@ Note: If you have Wordpress 2.7 or above (and I hope you are) you can simply go 
 ...coming soon!
 
 == Changelog ==
+
+= 1.1 =
+* NEW: Form themes added with two basic styles: Minimal Light and Minimal Dark
+* NEW: Added form labels to the frontend output with new fields in the widget to toggle labels on or off
+* NEW: Added the ability to customize form label text within "Content Options" - useful for non-English languages
+* NEW: Twitter Bootstrap select menu implemented for better dropdowns (selects)
+* NEW: Powered by Open Table at bottom of widget output
+* Fixed: Issue with autocomplete selection effecting multiple instances of the widget in the WP admin
+* Removed: Timepicker JS, just wasn't making the cut
 
 = 1.0.1 =
 * Fixed: JavaScript issue with main frontend JS script

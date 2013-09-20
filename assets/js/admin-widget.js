@@ -22,7 +22,6 @@ jQuery(document).ready(function ($) {
 
 
 function otwAutoComplete(){
-    jQuery.noConflict();
 
     jQuery(".otw-auto-complete").autocomplete({
 
@@ -69,7 +68,7 @@ function otwAutoComplete(){
         select: function (event, ui) {
 
             //Set Restaurant ID field when clicked
-            jQuery('.restaurant-id').val(ui.item.id);
+            jQuery(this).parent().next().children('.restaurant-id').val(ui.item.id);
 
         }
 

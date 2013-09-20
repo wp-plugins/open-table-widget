@@ -9,27 +9,22 @@
 jQuery(document).ready(function ($) {
 
     //Datepicker
+    //@SEE: https://github.com/eternicode/bootstrap-datepicker
     $('.otw-reservation-date').datepicker({
         autoclose: true,
-        todayHighlight: true
+        todayHighlight: true,
+        startDate: '+0d'
     });
 
     //Set Date as Today
     $('.otw-reservation-date').val(getCurrentDate());
 
-
-    //Setup Time Picker
-    $('.otw-reservation-time').timepicker({
-        'scrollDefaultNow': true,
-        'setTime': new Date()
-    });
-
+    //Selects
+    $('.selectpicker').selectpicker();
 
     //Party Size Change
     $('.otw-party-size-select').on('change', function(){
-        console.log($(this).val());
         $('.PartySize').val($(this).val());
-
     });
 
 
@@ -37,7 +32,7 @@ jQuery(document).ready(function ($) {
 
 function getCurrentDate(){
     var today = new Date();
-    var dd = today.getDate();
+    var dd = today.getDate() + 1;
     var mm = today.getMonth()+1; //January is 0!
 
     var yyyy = today.getFullYear();

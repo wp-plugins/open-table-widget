@@ -39,4 +39,3 @@
     </div>
     <!--.sunrise-plugin-onehalf -->
 </div><!-- .metabox-holder-->
-<div class="sunrise-plugin-clear"></div>
