@@ -12,7 +12,7 @@ Open Table Widget makes it a breeze for you to add powerful Open Table reservati
 
 = Open Table Widget Premium =
 
-The Pro version of Open Table Widget is a significant upgrade to Open Table Widget that adds many features to the plugin. Upgrade today and save 10% using coupon code
+Open Table Widget Pro is a significant upgrade to Open Table Widget that adds many features to the plugin. Upgrade today and save 10% using coupon code `otwupgrade` at checkout. Here is a preview of features included in the Pro version:
 
 [youtube http://www.youtube.com/watch?v=kWAVSxuNCl0]
 
