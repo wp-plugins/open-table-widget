@@ -94,7 +94,7 @@
 			 */
 			function is_settings() {
 				global $pagenow;
-				return is_admin() && $pagenow == $this->settings['parent'] && $_GET['page'] == $this->slug;
+				return is_admin() && $pagenow == $this->settings['parent'] && isset($_GET['page']) && $_GET['page'] == $this->slug;
 			}
 
 			/**
@@ -184,7 +184,7 @@
 				// Check this is settings page
 				if ( !$this->is_settings() ) return;
 				// ACTION: RESET
-				if ( $_GET['action'] == 'reset' ) {
+				if ( isset($_GET['action']) && $_GET['action'] === 'reset' ) {
 					// Prepare variables
 					$new_options = array();
 					// Prepare data
@@ -203,7 +203,7 @@
 					}
 				}
 				// ACTION: SAVE
-				elseif ( $_POST['action'] == 'save' ) {
+				elseif ( isset($_POST['action']) && $_POST['action'] == 'save' ) {
 					// Prepare vars
 					$new_options = array();
 					// Prepare data

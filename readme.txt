@@ -3,22 +3,28 @@ Contributors: dlocc
 Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
 Requires at least: 3.5
-Tested up to: 3.6.1
-Stable tag: 1.2
+Tested up to: 3.8
+Stable tag: 1.3
 
 Open Table Widget makes it a breeze for you to add powerful Open Table reservation forms to your website via an easy to use and intuitive widget.
 
 == Description ==
 
 = Open Table Widget Premium =
-Coming Soon!
+
+The Pro version of Open Table Widget is a significant upgrade to Open Table Widget that adds many features to the plugin. Upgrade today and save 10% using coupon code
+
+[youtube http://www.youtube.com/watch?v=kWAVSxuNCl0]
+
+[View the Online Demo](http://opentablewidget.wordimpress.com/ "View the Online Demo of Open Table Widget Pro")
 
 = Open Table Widget =
-*Open Table Widget* is a powerful WordPress widget that allows any restaurant, bar, nightclub or eatery listed on Open Table to display one or many reservation forms directly to their website. Choose from a number of configuration options to implement a reservation form that will look amazing and help you increase your number of reservations and profits.
 
-Using the widget is easy! Equipped with tooltips, videos and in depth instructions, Open Table Widget is for WordPress users of all skill levels. Don't know CSS? No problem! We've baked in several amazing looking prebuilt form layouts to help fit reservation forms into any theme.
+*Open Table Widget* is a powerful WordPress widget that allows you to create powerful restaurant reservation forms for your website. Easily configure reservation forms that will look and function amazingly. Help increase the number of reservations and ultimately revenue by utilizing the power of Open Table.
 
-This plugin is actively developed and maintained and we welcome all suggestions, feedback and comments. If you enjoy this plugin be sure to rate it 5 stars and as "Working" to help propel it to the top.
+Using the widget is easy! This plugin is includes helpful tooltips, videos and in depth documentation to get you quickly up and running. Open Table Widget is for WordPress users of all skill levels. Don't know CSS? No problem! There's no code required. We've baked in several amazing looking prebuilt form layouts ("themes") to make integrating reservation forms into any theme that much easier.
+
+This plugin is actively developed and maintained and we welcome all suggestions, feedback and comments. If you enjoy this plugin be sure to rate it 5 stars and as "Working" to help get the word out.
 
 = Disclaimer =
 
@@ -40,7 +46,7 @@ The developer of this plugin is in no way affiliated with Open Table the company
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. That's it! You should now be able to use the widget.
 
-Note: If you have Wordpress 2.7 or above (and I hope you are) you can simply go to 'Plugins' &gt; 'Add New' in the WordPress admin and search for "Open Table Widget" and install it from there.
+Note: If you have WordPress 2.7 or above (and I hope you are) you can simply go to 'Plugins' &gt; 'Add New' in the WordPress admin and search for "Open Table Widget" and install it from there.
 
 == Frequently Asked Questions ==
 
@@ -50,7 +56,7 @@ If you want to include reservation integration into Open Table restaurant from a
 
 = Why does the widget look funny in my theme? =
 
-Most likely your theme has conflicting CSS that is interferring with the themes included with the plugin. If you're handy with CSS this can be an easy fix. If you are new to CSS then try out the Bare Bones theme to see if that looks nicer. Otherwise, you may have to hit up your coding friends to help you out.
+Most likely your theme has conflicting CSS that is interfering with the themes included with the plugin. If you're handy with CSS this can be an easy fix. If you are new to CSS then try out the Bare Bones theme to see if that looks nicer. Otherwise, you may have to hit up your coding friends to help you out.
 
 = Are style issue supported? =
 
@@ -69,6 +75,20 @@ Yes, there are three basic themes included in the free version of the plugin. Th
 3. A view of the widget in the WP Admin widgets view version 1.1 (it may look different depending on your version).
 
 == Changelog ==
+
+= 1.3 =
+
+* New: Two new themes - Shadow Light and Dark
+* New: Widget usage descriptions added to widget form
+* New: Grunt implemented for plugin packaging
+* New: Added promo video to options page
+* New: Linked to video tutorial for finding Open Table restaurant ID
+* Tested plugin with WordPress 3.8 for compatibility
+* Updated: jQuery Datepicker plugin to latest version
+* Updated: Improved the autocomplete search functionality of the Restaurant ID lookup
+* Updated: Options screen moved logo left of tabs
+* Fixed: Updated code to take care of several PHP notices
+* Fixed: Minor issue with widget toggles in admin section
 
 = 1.2 =
 * Updated: Readme file for additional informaiton

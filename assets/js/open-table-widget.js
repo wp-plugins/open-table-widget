@@ -12,8 +12,7 @@ jQuery(document).ready(function ($) {
     //@SEE: https://github.com/eternicode/bootstrap-datepicker
     $('.otw-reservation-date').datepicker({
         autoclose: true,
-        todayHighlight: true,
-        startDate: '+0d'
+        todayHighlight: true
     });
 
     //Set Date as Today
