@@ -41,7 +41,6 @@ Bootstrap Necessities
 	width: 100%;
 	border: 1px solid #CCC;
 	background-color: #FFF;
-	height: 30px;
 	line-height: 30px;
 }
 
@@ -1332,7 +1331,7 @@ OTW Minimal Themes
 	margin-right: 3%;
 }
 
-.otw-minimal-light-style .otw-reservation-date, .otw-minimal-dark-style .otw-reservation-date {
+.otw-reservation-date {
 	width: 100%;
 	background: url('../images/calendar-icon.png') no-repeat 96% center #FFF;
 	padding: 6px;
@@ -1406,4 +1405,38 @@ OTW Shadow Themes
 .otw-shadow-dark-style .otw-widget-title, .otw-inset-dark-style .otw-widget-title {
 	border: none;
 	box-shadow: none;
+}
+
+/*--------------------------------
+OTW Inset Themes
+------------------------------------*/
+
+.otw-inset-light-style, .otw-inset-dark-style {
+	padding: 15px 20px;
+	border-radius: 10px;
+	background-color: #f8f8f8;
+	background: linear-gradient(top, #f9f9f9, #F5F5F5);
+	background: -o-linear-gradient(top, #f9f9f9, #F5F5F5);
+	background: -moz-linear-gradient(top, #f9f9f9, #F5F5F5);
+	background: -webkit-linear-gradient(top, #F9F9F9, #F5F5F5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#F5F5F5', GradientType=0);
+	background: -ms-linear-gradient(top, #FFFFFF, #F5F5F5);
+	-moz-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.20);
+	-webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.otw-inset-dark-style {
+	color: #FFF;
+	background-color: #333;
+	background: linear-gradient(top, #333, #525252);
+	background: -o-linear-gradient(top, #333, #525252);
+	background: -moz-linear-gradient(top, #333, #525252);
+	background: -webkit-linear-gradient(top, #333, #525252);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='#525252', GradientType=0);
+	background: -ms-linear-gradient(top, #333, #525252);
+
+	-moz-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.50);
+	-webkit-box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0px 1px 6px rgba(0, 0, 0, 0.5);
 }

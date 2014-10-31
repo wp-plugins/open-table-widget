@@ -1,11 +1,11 @@
 // Wait DOM
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
 
 	// ########## Tabs ##########
 
 	// Nav tab click
-	$('#sunrise-plugin-tabs span').click(function(event) {
+	$('#sunrise-plugin-tabs span').click(function (event) {
 		// Hide tips
 		$('.sunrise-plugin-spin, .sunrise-plugin-success-tip').hide();
 		// Remove active class from all tabs
@@ -17,15 +17,15 @@ jQuery(document).ready(function($) {
 		// Show current pane
 		$('.sunrise-plugin-pane:eq(' + $(this).index() + ')').show();
 		// Save tab to cookies
-		sunriseCreateCookie( pagenow + '_last_tab', $(this).index(), 365 );
+		sunriseCreateCookie(pagenow + '_last_tab', $(this).index(), 365);
 	});
 
 	// Auto-open tab by link with hash
-	if ( sunriseStrpos( document.location.hash, '#tab-' ) !== false )
-		$('#sunrise-plugin-tabs span:eq(' + document.location.hash.replace('#tab-','') + ')').trigger('click');
+	if (sunriseStrpos(document.location.hash, '#tab-') !== false)
+		$('#sunrise-plugin-tabs span:eq(' + document.location.hash.replace('#tab-', '') + ')').trigger('click');
 	// Auto-open tab by cookies
-	else if ( sunriseReadCookie( pagenow + '_last_tab' ) != null )
-		$('#sunrise-plugin-tabs span:eq(' + sunriseReadCookie( pagenow + '_last_tab' ) + ')').trigger('click');
+	else if (sunriseReadCookie(pagenow + '_last_tab') != null)
+		$('#sunrise-plugin-tabs span:eq(' + sunriseReadCookie(pagenow + '_last_tab') + ')').trigger('click');
 	// Open first tab by default
 	else
 		$('#sunrise-plugin-tabs span:eq(0)').trigger('click');
@@ -34,15 +34,15 @@ jQuery(document).ready(function($) {
 	// ########## Ajaxed form ##########
 
 	$('#sunrise-plugin-options-form').ajaxForm({
-		beforeSubmit: function() {
+		beforeSubmit: function () {
 			$('.sunrise-plugin-success-tip').hide();
 			$('.sunrise-plugin-spin').fadeIn(200);
 			$('.sunrise-plugin-submit').attr('disabled', true);
 		},
-		success: function() {
+		success     : function () {
 			$('.sunrise-plugin-spin').hide();
 			$('.sunrise-plugin-success-tip').show();
-			setTimeout(function() {
+			setTimeout(function () {
 				$('.sunrise-plugin-success-tip').fadeOut(200);
 			}, 2000);
 			$('.sunrise-plugin-submit').attr('disabled', false);
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 
 	// ########## Reset settings confirmation ##########
 
-	$('.sunrise-plugin-reset').click(function() {
+	$('.sunrise-plugin-reset').click(function () {
 		if (!confirm($(this).attr('title')))
 			return false;
 		else
@@ -64,21 +64,21 @@ jQuery(document).ready(function($) {
 
 	$('.sunrise-plugin-notification').css({
 		cursor: 'pointer'
-	}).on('click', function(event) {
-		$(this).fadeOut(100, function() {
-			$(this).remove();
-		});
-	});
+	}).on('click', function (event) {
+				$(this).fadeOut(100, function () {
+					$(this).remove();
+				});
+			});
 
 
 	// ########## Triggables ##########
 
 	// Select
-	$('tr[data-trigger-type="select"] select').each(function(i) {
+	$('tr[data-trigger-type="select"] select').each(function (i) {
 
 		var // Input data
-		name = $(this).attr('name'),
-		index = $(this).find(':selected').index();
+				name = $(this).attr('name'),
+				index = $(this).find(':selected').index();
 
 		//alert( name + ' - ' + index );
 
@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
 		// Show selected triggable
 		$('tr.sunrise-plugin-triggable[data-triggable="' + name + '=' + index + '"]').show();
 
-		$(this).change(function() {
+		$(this).change(function () {
 
 			index = $(this).find(':selected').index();
 
@@ -101,11 +101,11 @@ jQuery(document).ready(function($) {
 	});
 
 	// Radio
-	$('tr[data-trigger-type="radio"] .sunrise-plugin-radio-group').each(function(i) {
+	$('tr[data-trigger-type="radio"] .sunrise-plugin-radio-group').each(function (i) {
 
 		var // Input data
-		name = $(this).find(':checked').attr('name'),
-		index = $(this).find(':checked').parent('label').parent('div').index();
+				name = $(this).find(':checked').attr('name'),
+				index = $(this).find(':checked').parent('label').parent('div').index();
 
 		// Hide all related triggables
 		$('tr.sunrise-plugin-triggable[data-triggable^="' + name + '="]').hide();
@@ -113,9 +113,9 @@ jQuery(document).ready(function($) {
 		// Show selected triggable
 		$('tr.sunrise-plugin-triggable[data-triggable="' + name + '=' + index + '"]').show();
 
-		$(this).find('input:radio').each(function(i2) {
+		$(this).find('input:radio').each(function (i2) {
 
-			$(this).change(function() {
+			$(this).change(function () {
 
 				alert();
 
@@ -131,15 +131,15 @@ jQuery(document).ready(function($) {
 
 	// ########## Clickouts ##########
 
-	$(document).on('click', function(event) {
-		if ( $('.sunrise-plugin-prevent-clickout:hover').length == 0 )
+	$(document).on('click', function (event) {
+		if ($('.sunrise-plugin-prevent-clickout:hover').length == 0)
 			$('.sunrise-plugin-clickout').hide();
 	});
 
 
 	// ########## Upload buttons ##########
 
-	$('.sunrise-plugin-upload-button').click(function(event) {
+	$('.sunrise-plugin-upload-button').click(function (event) {
 
 		// Define upload field
 		window.sunrise_current_upload = $(this).attr('rel');
@@ -151,11 +151,11 @@ jQuery(document).ready(function($) {
 		event.preventDefault();
 	});
 
-	window.send_to_editor = function(html) {
+	window.send_to_editor = function (html) {
 
 		var url;
 
-		if ( jQuery(html).filter('img:first').length > 0 )
+		if (jQuery(html).filter('img:first').length > 0)
 			url = jQuery(html).filter('img:first').attr('src');
 		else
 			url = jQuery(html).filter('a:first').attr('href');
@@ -170,9 +170,9 @@ jQuery(document).ready(function($) {
 
 	// ########## Color picker ##########
 
-	$('.sunrise-plugin-color-picker-preview').each(function(index) {
+	$('.sunrise-plugin-color-picker-preview').each(function (index) {
 		$(this).farbtastic('.sunrise-plugin-color-picker-value:eq(' + index + ')');
-		$('.sunrise-plugin-color-picker-value:eq(' + index + ')').focus(function(event) {
+		$('.sunrise-plugin-color-picker-value:eq(' + index + ')').focus(function (event) {
 			$('.sunrise-plugin-color-picker-preview').hide();
 			$('.sunrise-plugin-color-picker-preview:eq(' + index + ')').show();
 		});
@@ -183,21 +183,21 @@ jQuery(document).ready(function($) {
 
 // ########## Cookie utilities ##########
 
-function sunriseCreateCookie(name,value,days){
-	if(days){
-		var date=new Date();
-		date.setTime(date.getTime()+(days*24*60*60*1000));
-		var expires="; expires="+date.toGMTString()
-	}else var expires="";
-	document.cookie=name+"="+value+expires+"; path=/"
+function sunriseCreateCookie(name, value, days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		var expires = "; expires=" + date.toGMTString()
+	} else var expires = "";
+	document.cookie = name + "=" + value + expires + "; path=/"
 }
-function sunriseReadCookie(name){
-	var nameEQ=name+"=";
-	var ca=document.cookie.split(';');
-	for(var i=0;i<ca.length;i++){
-		var c=ca[i];
-		while(c.charAt(0)==' ')c=c.substring(1,c.length);
-		if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length)
+function sunriseReadCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ')c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0)return c.substring(nameEQ.length, c.length)
 	}
 	return null
 }
@@ -205,7 +205,7 @@ function sunriseReadCookie(name){
 
 // ########## Strpos tool ##########
 
-function sunriseStrpos( haystack, needle, offset) {
-	var i = haystack.indexOf( needle, offset );
+function sunriseStrpos(haystack, needle, offset) {
+	var i = haystack.indexOf(needle, offset);
 	return i >= 0 ? i : false;
 }

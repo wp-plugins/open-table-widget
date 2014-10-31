@@ -3,7 +3,7 @@
 Plugin Name: Open Table Widget
 Plugin URI: http://wordpress.org/extend/plugins/open-table-widget/
 Description: Display an Open Table widget for your restaurant, bar, nightclub or eatery.
-Version: 1.3
+Version: 1.4
 Author: Devin Walker
 Author URI: http://imdev.in/
 Text Domain: otw
@@ -26,9 +26,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'OTW_PLUGIN_NAME', 'open-table-widget' );
-define( 'OTW_PLUGIN_NAME_PLUGIN', 'open-table-widget/open-table-widget.php' );
-define( 'OTW_PLUGIN_PATH', WP_PLUGIN_DIR . '/' . OTW_PLUGIN_NAME );
-define( 'OTW_PLUGIN_URL', WP_PLUGIN_URL . '/' . OTW_PLUGIN_NAME );
+define( 'OTW_PLUGIN_NAME_PLUGIN', plugin_basename( __FILE__ ) );
+define( 'OTW_PLUGIN_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'OTW_PLUGIN_URL', plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) );
+define( 'OTW_DEBUG', false );
+
 
 function init_open_table_widget() {
 

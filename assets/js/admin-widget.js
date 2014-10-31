@@ -10,7 +10,6 @@
 jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
-
 	/*
 	 * Initialize the API Request Method widget radio input toggles
 	 */
@@ -98,7 +97,7 @@ jQuery(document).ajaxSuccess(function (e, xhr, settings) {
 function otwWidgetToggles() {
 
 	//Widget Display Options Toggle
-	jQuery('#widgets-right .widget-api-option .otw-method-span:not("clickable")').each(function () {
+	jQuery('.widget-api-option .otw-method-span:not("clickable")').each(function () {
 
 		jQuery(this).addClass("clickable").unbind("click").click(function () {
 			jQuery(this).parent().parent().find('.toggled').slideUp().removeClass('toggled');
@@ -115,7 +114,7 @@ function otwWidgetToggles() {
 
 
 	//Advanced Options Toggle (Bottom-gray panels)
-	jQuery('#widgets-right .otw-widget-toggler:not("clickable")').each(function () {
+	jQuery('.otw-widget-toggler:not("clickable")').each(function () {
 
 		jQuery(this).addClass("clickable").unbind("click").click(function () {
 			jQuery(this).toggleClass('toggled');

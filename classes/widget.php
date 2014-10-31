@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  Open Table Widget
  *
@@ -6,7 +7,6 @@
  * @since      : 1.0
  * @created    : 8/28/13
  */
-
 class Open_Table_Widget extends WP_Widget {
 
 	var $options; //Plugin Options from Options Panel
@@ -34,15 +34,18 @@ class Open_Table_Widget extends WP_Widget {
 
 	//Load Widget JS Script ONLY on Widget page
 	function add_otw_admin_widget_scripts( $hook ) {
+
+		$suffix = defined( 'OTW_DEBUG' ) && OTW_DEBUG ? '' : '.min';
+
 		if ( $hook == 'widgets.php' ) {
 
 			wp_enqueue_script( 'jquery-ui-autocomplete' );
-			wp_enqueue_script( 'otw_widget_admin_scripts', plugins_url( 'assets/js/admin-widget.min.js', dirname( __FILE__ ) ), array( 'jquery' ) );
+			wp_enqueue_script( 'otw_widget_admin_scripts', plugins_url( 'assets/js/admin-widget' . $suffix . '.js', dirname( __FILE__ ) ), array( 'jquery' ) );
 			// in javascript, object properties are accessed as ajax_object.ajax_url, ajax_object.we_value
 			wp_localize_script( 'otw_widget_admin_scripts', 'ajax_object',
 				array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-			wp_enqueue_style( 'otw_widget_admin_css', plugins_url( 'assets/css/admin-widget.min.css', dirname( __FILE__ ) ) );
+			wp_enqueue_style( 'otw_widget_admin_css', plugins_url( 'assets/css/admin-widget' . $suffix . '.css', dirname( __FILE__ ) ) );
 
 		} else {
 			return;
@@ -69,39 +72,40 @@ class Open_Table_Widget extends WP_Widget {
 
 	function add_otw_widget_css() {
 
-		/**
-		 * CSS
-		 */
+		//Determine whether to display minified scripts/css or not (debugging true sets it)
+		$suffix = defined( 'OTW_DEBUG' ) && OTW_DEBUG ? '' : '.min';
+
+		$otw_css        = plugins_url( 'assets/css/open-table-widget' . $suffix . '.css', dirname( __FILE__ ) );
+		$otw_datepicker = plugins_url( 'assets/js/jquery.bootstrap-datepicker' . $suffix . '.js', dirname( __FILE__ ) );
+
 		if ( $this->options["disable_css"] !== "on" ) {
-			wp_register_style( 'otw_widget', plugins_url( 'assets/css/open-table-widget.min.css', dirname( __FILE__ ) ) );
+			wp_register_style( 'otw_widget', $otw_css );
 			wp_enqueue_style( 'otw_widget' );
 		}
-		/**
-		 * JS
-		 */
+
+		//We need jQuery here
 		wp_enqueue_script( 'jquery' );
 
 		//Datepicker
-		wp_register_script( 'otw_datepicker_js', plugins_url( 'assets/js/jquery.datepicker.min.js', dirname( __FILE__ ), array( 'jquery' ) ) );
+		wp_register_script( 'otw_datepicker_js', $otw_datepicker, array( 'jquery' ) );
 		wp_enqueue_script( 'otw_datepicker_js' );
+
+		//Select Download
+		if ( $this->options["disable_bootstrap_dropdown"] !== "on" && $this->options["disable_bootstrap_select"] !== "on" ) {
+			wp_register_script( 'otw_dropdown_js', plugins_url( 'assets/js/jquery.bootstrap-dropdown' . $suffix . '.js', dirname( __FILE__ ) ) );
+			wp_enqueue_script( 'otw_dropdown_js' );
+		}
 
 		//Select Menus
 		if ( $this->options["disable_bootstrap_select"] !== "on" ) {
-
-			wp_register_script( 'otw_select_js', plugins_url( 'assets/js/jquery.bootstrap-select.min.js', dirname( __FILE__ ), array( 'jquery' ) ) );
+			wp_register_script( 'otw_select_js', plugins_url( 'assets/js/jquery.bootstrap-select' . $suffix . '.js', dirname( __FILE__ ), array( 'jquery' ) ) );
 			wp_enqueue_script( 'otw_select_js' );
-
-		}
-
-		if ( $this->options["disable_bootstrap_dropdown"] !== "on" && $this->options["disable_bootstrap_select"] !== "on" ) {
-			wp_register_script( 'otw_dropdown_js', plugins_url( 'assets/js/jquery.bootstrap-dropdown.min.js', dirname( __FILE__ ) ) );
-			wp_enqueue_script( 'otw_dropdown_js' );
 		}
 
 
 		//Open Table Widget Specific Scripts
-		wp_register_script( 'otw-widget-js', plugins_url( 'assets/js/open-table-widget.min.js', dirname( __FILE__ ), array( 'jquery' ) ) );
-		wp_enqueue_script( 'otw-widget-js' );
+		wp_register_script( 'otw_widget_js', plugins_url( 'assets/js/open-table-widget' . $suffix . '.js', dirname( __FILE__ ), array( 'jquery' ) ) );
+		wp_enqueue_script( 'otw_widget_js' );
 		$jsParams = array(
 			'restaurant_id' => ''
 		);
@@ -155,16 +159,21 @@ class Open_Table_Widget extends WP_Widget {
 
 		// if the title is set & the user hasn't disabled title output
 		if ( ! empty( $title ) ) {
-			/* Add the width from $widget_width to the class from the $before widget
+			/* Add class to before_widget from within a custom widget
 		 http://wordpress.stackexchange.com/questions/18942/add-class-to-before-widget-from-within-a-custom-widget
 		 */
 			// no 'class' attribute - add one with the value of width
-			if ( strpos( $before_title, 'class' ) === false ) {
-				$before_title = str_replace( '>', 'class="otw-widget-title"', $before_title );
-			} // there is 'class' attribute - append width value to it
+			if ( ! empty( $before_title ) && strpos( $before_title, 'class' ) === false ) {
+				$before_title = str_replace( '>', ' class="otw-widget-title">', $before_title );
+			} //widget title has 'class' attribute
+			elseif ( ! empty( $before_title ) && strpos( $before_title, 'class' ) !== false ) {
+				$before_title = str_replace( 'class="', 'class="otw-widget-title ', $before_title );
+			} //no 'title' at all so wrap widget with div
 			else {
+				$before_title = '<h3 class="">';
 				$before_title = str_replace( 'class="', 'class="otw-widget-title ', $before_title );
 			}
+			$after_title = empty( $after_title ) ? '</h3>' : $after_title;
 
 			echo $before_title . $title . $after_title;
 		}

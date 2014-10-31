@@ -3,8 +3,8 @@ Contributors: dlocc
 Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
 Requires at least: 3.5
-Tested up to: 3.8
-Stable tag: 1.3
+Tested up to: 4.0
+Stable tag: 1.4
 
 Open Table Widget makes it a breeze for you to add powerful Open Table reservation forms to your website via an easy to use and intuitive widget.
 
@@ -76,8 +76,16 @@ Yes, there are three basic themes included in the free version of the plugin. Th
 
 == Changelog ==
 
-= 1.3 =
+= 1.4 =
+* New: Debug constant added for easier script and css debugging by developers
+* Improved: datepicker JS minified
+* Improved: Updated how the widget title is output to be better compatible with more sidebar register arguments
+* Improved: OTW constants now use relative directories so the plugin works even if the main plugin directory is named something besides the default open-table-widget (for instance: open-table-widget-2) etc.
+* Updates: jQuery Bootstrap Dropdown & jQuery Bootstrap Select scripts to the latest versions & tested
+* Fix: Widget admin JS toggle now works with "accessibility mode" enabled
+* Fix: Improved reservation date handling so it outputs more reliably
 
+= 1.3 =
 * New: Two new themes - Shadow Light and Dark
 * New: Widget usage descriptions added to widget form
 * New: Grunt implemented for plugin packaging

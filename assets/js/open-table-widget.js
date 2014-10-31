@@ -8,36 +8,25 @@
 
 jQuery(document).ready(function ($) {
 
-    //Datepicker
-    //@SEE: https://github.com/eternicode/bootstrap-datepicker
-    $('.otw-reservation-date').datepicker({
-        autoclose: true,
-        todayHighlight: true
-    });
+	//Datepicker
+	//@SEE: https://github.com/eternicode/bootstrap-datepicker
+	$('.otw-reservation-date').datepicker({
+		autoclose     : true,
+		todayHighlight: true
+	});
 
-    //Set Date as Today
-    $('.otw-reservation-date').val(getCurrentDate());
+	//Set Date as Today
+	$('.otw-reservation-date').datepicker('update', new Date());
 
-    //Selects (only if loaded)
-    if (typeof $.fn.selectpicker == 'function' ) {
-        $('.selectpicker').selectpicker();
-    }
+	//Selects (only if loaded)
+	if (typeof $.fn.selectpicker == 'function') {
+		$('.selectpicker').selectpicker();
+	}
 
-    //Party Size Change
-    $('.otw-party-size-select').on('change', function(){
-        $('.PartySize').val($(this).val());
-    });
+	//Party Size Change
+	$('.otw-party-size-select').on('change', function () {
+		$('.PartySize').val($(this).val());
+	});
 
 
 });
-
-function getCurrentDate(){
-    var today = new Date();
-    var dd = today.getDate() + 1;
-    var mm = today.getMonth()+1; //January is 0!
-
-    var yyyy = today.getFullYear();
-    if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = mm+'/'+dd+'/'+yyyy;
-    return today;
-
-}

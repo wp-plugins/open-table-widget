@@ -32,12 +32,13 @@
 }
 
 .wordimpress-section:last-of-type {
-	border-bottom:none;
+	border-bottom: none;
 }
 
 .new-window {
 	background: url('../images/new-window-icon.png') no-repeat right center rgba(0, 0, 0, 0);
-	padding-right: 16px;
+	padding-right: 12px;
+	margin-right: 3px;
 }
 
 /***********************************
