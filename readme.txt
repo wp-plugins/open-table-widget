@@ -1,5 +1,5 @@
 === Open Table Widget ===
-Contributors: dlocc
+Contributors: wordimpress, dlocc, webdevmattcrom
 Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
 Requires at least: 3.5
