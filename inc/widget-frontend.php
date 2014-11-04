@@ -24,7 +24,7 @@
 				<?php if ( $hideLabels !== '1' ) { ?>
 					<label for="date-<?php echo $args["widget_id"]; ?>"><?php
 						if ( empty( $labelDate ) ) {
-							_e( 'Date', 'otw' );
+							_e( 'Date', 'open-table-widget' );
 						} else {
 							echo $labelDate;
 						}
@@ -35,7 +35,7 @@
 			<div class="otw-time-wrap otw-input-wrap">
 				<?php if ( $hideLabels !== '1' ) { ?>
 					<label for="time-<?php echo $args["widget_id"]; ?>"><?php if ( empty( $labelTime ) ) {
-							_e( 'Time', 'otw' );
+							_e( 'Time', 'open-table-widget' );
 						} else {
 							echo $labelTime;
 						} ?></label>
@@ -64,7 +64,7 @@
 			<div class="otw-party-size-wrap otw-input-wrap">
 				<?php if ( $hideLabels !== '1' ) { ?>
 					<label for="party-<?php echo $args["widget_id"]; ?>"><?php if ( empty( $labelParty ) ) {
-							_e( 'Party Size', 'otw' );
+							_e( 'Party Size', 'open-table-widget' );
 						} else {
 							echo $labelParty;
 						}  ?></label>
@@ -85,7 +85,7 @@
 			</div>
 
 			<div class="otw-button-wrap">
-				<input type="submit" class="<?php echo( $style == 'otw-bare-bones-style' ? 'otw-submit' : 'otw-submit-btn' ); ?>" value="<?php _e( 'Find a Table', 'otw' ); ?>" />
+				<input type="submit" class="<?php echo( $style == 'otw-bare-bones-style' ? 'otw-submit' : 'otw-submit-btn' ); ?>" value="<?php _e( 'Find a Table', 'open-table-widget' ); ?>" />
 			</div>
 			<input type="hidden" name="RestaurantID" class="RestaurantID" value="<?php echo $restaurantID; ?>">
 			<input type="hidden" name="rid" class="rid" value="<?php echo $restaurantID; ?>">
@@ -102,5 +102,5 @@
 			<?php echo wpautop( $postContent ); ?>
 		</div>
 	<?php } ?>
-	<div class="powered-by-open-table"><span class="powered-by-text"><?php _e( 'Powered By:', 'otw' ); ?></span></div>
+	<div class="powered-by-open-table"><span class="powered-by-text"><?php _e( 'Powered By:', 'open-table-widget' ); ?></span></div>
 </div><!-- /.otw-widget-form-wrap -->

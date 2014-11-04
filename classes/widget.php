@@ -20,7 +20,7 @@ class Open_Table_Widget extends WP_Widget {
 			'Open Table Widget', // Name
 			array(
 				'classname'   => 'open-table-widget',
-				'description' => __( 'Display an Open Table reservation form for your restaurant using an easy to use and intuitive widget', 'otw' )
+				'description' => __( 'Display an Open Table reservation form for your restaurant using an easy to use and intuitive widget', 'open-table-widget' )
 			)
 		);
 
