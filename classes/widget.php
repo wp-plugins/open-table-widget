@@ -76,7 +76,8 @@ class Open_Table_Widget extends WP_Widget {
 		$suffix = defined( 'OTW_DEBUG' ) && OTW_DEBUG ? '' : '.min';
 
 		$otw_css        = plugins_url( 'assets/css/open-table-widget' . $suffix . '.css', dirname( __FILE__ ) );
-		$otw_datepicker = plugins_url( 'assets/js/jquery.bootstrap-datepicker' . $suffix . '.js', dirname( __FILE__ ) );
+
+		$otw_datepicker = plugins_url( 'assets/js/datepicker' . $suffix . '.js', dirname( __FILE__ ) );
 
 		if ( $this->options["disable_css"] !== "on" ) {
 			wp_register_style( 'otw_widget', $otw_css );

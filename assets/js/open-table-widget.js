@@ -8,16 +8,6 @@
 
 jQuery(document).ready(function ($) {
 
-	//Datepicker
-	//@SEE: https://github.com/eternicode/bootstrap-datepicker
-	$('.otw-reservation-date').datepicker({
-		autoclose     : true,
-		todayHighlight: true
-	});
-
-	//Set Date as Today
-	$('.otw-reservation-date').datepicker('update', new Date());
-
 	//Selects (only if loaded)
 	if (typeof $.fn.selectpicker == 'function') {
 		$('.selectpicker').selectpicker();
@@ -27,6 +17,12 @@ jQuery(document).ready(function ($) {
 	$('.otw-party-size-select').on('change', function () {
 		$('.PartySize').val($(this).val());
 	});
-
+	
+	//Datepicker Initialization
+	$(".otw-reservation-date").otwdatepicker({
+		autoClose: true,
+		dateFormat: "mm/dd/yyyy",
+		weekStart: 0
+	});
 
 });
