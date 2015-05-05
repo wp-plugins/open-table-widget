@@ -3,7 +3,7 @@ Contributors: wordimpress, dlocc, webdevmattcrom
 Donate link: http://wordimpress.com/
 Tags: open table, open table widget, open table form, open table reservations, reservations, restaurant, open table shortcode
 Requires at least: 3.5
-Tested up to: 4.1
+Tested up to: 4.2.1
 Stable tag: 1.5.1
 
 Open Table Widget makes it a breeze for you to add powerful Open Table reservation forms to your website via an easy to use and intuitive widget.
@@ -59,6 +59,7 @@ Most likely your theme has conflicting CSS that is interfering with the themes i
 = Are style issue supported? =
 
 Not for the free plugin. If you are experiencing a style issue and need help, either upgrade to the Premium version and we will do our darndest to get it set up nicely for your theme.
+Not for the free plugin. If you are experiencing a style issue and need help, either upgrade to the Premium version and we will do our darndest to get it set up nicely for your theme.
 
 = Are there prebuilt styles included in the plugin? =
 
@@ -73,6 +74,16 @@ Yes, there are three basic themes included in the free version of the plugin. Th
 3. A view of the widget in the WP Admin widgets view version 1.1 (it may look different depending on your version).
 
 == Changelog ==
+
+= 1.6 =
+* New: Updated Open Table branding to their new logo
+* Update: Prefixed the "dropdown" class usage to help out theme authors
+* Update: Prefixed the "bootstrap-success" class usage to help out theme authors
+* Update: Prefixed the "btn-"* class usage to help out theme authors
+* Update: Prefixed the "selectpicker" class usage to help out theme authors
+* Update: Prefixed the "datepicker-"* class usage and revised js script to help out theme authors
+* Update: Swapped OTW_DEBUG for SCRIPT_DEBUG for non-minified scripts
+
 = 1.5.1 =
 * Improved: Replaced datepicker since bootstrap datepicker has no functioning noconflict mode
 

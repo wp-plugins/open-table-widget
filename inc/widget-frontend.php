@@ -40,7 +40,7 @@
 							echo $labelTime;
 						} ?></label>
 				<?php } ?>
-				<select id="time-<?php echo $args["widget_id"]; ?>" name="ResTime" class="otw-reservation-time selectpicker">
+				<select id="time-<?php echo $args["widget_id"]; ?>" name="ResTime" class="otw-reservation-time otw-selectpicker">
 					<?php
 					//Time Loop
 					//@SEE: http://stackoverflow.com/questions/6530836/php-time-loop-time-one-and-half-of-hour

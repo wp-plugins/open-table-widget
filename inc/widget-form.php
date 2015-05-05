@@ -88,7 +88,13 @@
 		<label for="<?php echo $this->get_field_id( 'widget_style' ); ?>"><?php _e( 'Widget Theme' ); ?>:</label>
 		<select name="<?php echo $this->get_field_name( 'widget_style' ); ?>" id="#" class="widefat profield">
 			<?php
-			$options = array( __( 'Bare Bones', 'open-table-widget' ), __( 'Minimal Light', 'open-table-widget' ), __( 'Minimal Dark', 'open-table-widget' ), __( 'Shadow Light', 'open-table-widget' ), __( 'Shadow Dark', 'open-table-widget' ) );
+			$options = array(
+				__( 'Bare Bones', 'open-table-widget' ),
+				__( 'Minimal Light', 'open-table-widget' ),
+				__( 'Minimal Dark', 'open-table-widget' ),
+				__( 'Shadow Light', 'open-table-widget' ),
+				__( 'Shadow Dark', 'open-table-widget' )
+			);
 			//Counter for Option Values
 			$counter = 0;
 
@@ -99,7 +105,7 @@
 			?>
 		</select>
 	</p>
-	
+
 	<div class="pro-only">
 		<p class="pro-only-p">
 			<a href="http://wordimpress.com/plugins/open-table-widget-pro/" class="new-window tooltip-info" title="Unlock Pro Features" target="_blank">Upgrade to Pro Version</a>
@@ -151,7 +157,7 @@
 		<label for="<?php echo $this->get_field_id( 'post_content' ); ?>"><?php _e( 'Post Form Content', 'open-table-widget' ); ?>:</label>
 		<textarea class="widefat" id="#" name="<?php echo $this->get_field_name( 'post_content' ); ?>" rows="3" cols="25"><?php echo $postContent; ?></textarea>
 	</p>
-	
+
 	<div class="pro-only">
 		<p class="pro-only-p">
 			<a href="http://wordimpress.com/plugins/open-table-widget-pro/" class="new-window tooltip-info" title="Unlock Pro Features" target="_blank">Upgrade to Pro Version</a>
@@ -163,5 +169,12 @@
 </div>
 
 <div class="pro-only green">
-	<p class="pro-only-p" style="text-align:center; font-size: 90%; font-style: italic;"><a href="http://wordimpress.com/plugins/open-table-widget-pro/" target="_blank" class="new-window" style="margin: 0;">Upgrade to Open Table Widget Pro</a></p>
+	<p class="pro-only-p" style="text-align:center; font-size: 90%; font-style: italic;">
+		<a href="http://wordimpress.com/plugins/open-table-widget-pro/" target="_blank" class="new-window" style="margin: 0;">Upgrade to Open Table Widget Pro</a>
+	</p>
+</div>
+
+<div class="powered-by">
+	<p><?php _e( 'Powered by:', 'otw' ); ?></p>
+	<img src="<?php echo OTW_PLUGIN_URL; ?>/assets/images/open-table-logo-transparent-150.png" alt="Powered by Open Table" />
 </div>

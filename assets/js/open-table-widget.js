@@ -2,15 +2,13 @@
  *  Open Table Widget JavaScript
  *
  *  @description: JavaScripts for the frontend display of Open Table Widget
- *  @author: Devin Walker
- *  @created: 9/10/13
  */
 
 jQuery(document).ready(function ($) {
 
 	//Selects (only if loaded)
 	if (typeof $.fn.selectpicker == 'function') {
-		$('.selectpicker').selectpicker();
+		$('.otw-selectpicker').selectpicker();
 	}
 
 	//Party Size Change

@@ -35,7 +35,7 @@ class Open_Table_Widget extends WP_Widget {
 	//Load Widget JS Script ONLY on Widget page
 	function add_otw_admin_widget_scripts( $hook ) {
 
-		$suffix = defined( 'OTW_DEBUG' ) && OTW_DEBUG ? '' : '.min';
+		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		if ( $hook == 'widgets.php' ) {
 
@@ -73,7 +73,7 @@ class Open_Table_Widget extends WP_Widget {
 	function add_otw_widget_css() {
 
 		//Determine whether to display minified scripts/css or not (debugging true sets it)
-		$suffix = defined( 'OTW_DEBUG' ) && OTW_DEBUG ? '' : '.min';
+		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		$otw_css        = plugins_url( 'assets/css/open-table-widget' . $suffix . '.css', dirname( __FILE__ ) );
 
